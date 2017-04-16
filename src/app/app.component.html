@@ -1,6 +1,12 @@
 <h1>
   {{title}}
 </h1>
+<nav>
+  <ul>
+    <li><a [routerLink]="['/']">Home</a></li>
+    <li><a [routerLink]="['/contacts']">Contacts</a></li>
+  </ul>
+</nav>
 
 <!--<app-home [valFromApp] = "valForHome" (customEvent) = "onCustomEvent($event)">ng-content</app-home>-->
 <router-outlet></router-outlet>
