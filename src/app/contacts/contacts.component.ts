@@ -7,8 +7,11 @@ import { ActivatedRoute } from "@angular/router";
   styleUrls: ['./contacts.component.css']
 })
 export class ContactsComponent implements OnInit {
-  classes = {'blue': true, 'red': false, underline: true};
-  test = true;
+  ninjas = [
+    {name: 'Yoshi', belt: 'black'},
+    {name: 'Rui', belt: 'red'},
+    {name: 'Crystal', belt: 'purple'}
+  ];
 
   constructor() {}
 
