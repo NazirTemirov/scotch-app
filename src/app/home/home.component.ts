@@ -7,20 +7,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   homeTitle = 'Hello world';
-  myValue = "some text";
-  myRequired = true;
-
-  @Input() valFromApp;
-  @Output() customEvent = new EventEmitter();
-
-  onMyButtonClick() {
-    alert('Somethink');
-  }
-
-  fireCustomEvent(e) {
-    this.customEvent.emit(e);
-  }
-
+  
   constructor() { }
 
   ngOnInit() {

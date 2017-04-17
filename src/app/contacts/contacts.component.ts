@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: 'app-contacts',
@@ -6,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contacts.component.css']
 })
 export class ContactsComponent implements OnInit {
+  classes = {'blue': true, 'red': false, underline: true};
+  test = true;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
   }

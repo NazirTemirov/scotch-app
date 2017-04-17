@@ -7,13 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!!!';
-
-  valForHome = {
-    name: 'Name',
-    color: 'Red'
-  };
-
-  onCustomEvent(e) {
-    alert('Custom event colled')
-  }
 }

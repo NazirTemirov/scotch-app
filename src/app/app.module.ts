@@ -10,9 +10,9 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { Routes, RouterModule } from "@angular/router";
 
 const appRoutes: Routes = [
-    { path: '', component: HomeComponent},
-    { path: 'home', component: HomeComponent},
-    {path: 'contacts', component: ContactsComponent}
+    {path: 'contacts/:ninja', component: ContactsComponent},
+    {path: 'contacts', component: ContactsComponent},
+    { path: '', component: HomeComponent}
 ];
 
 @NgModule({
