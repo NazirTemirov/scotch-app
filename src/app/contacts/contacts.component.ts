@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
+import { LoggingService } from "app/logging.service";
 
 @Component({
   selector: 'app-contacts',
@@ -7,13 +8,15 @@ import { ActivatedRoute } from "@angular/router";
   styleUrls: ['./contacts.component.css']
 })
 export class ContactsComponent implements OnInit {
-  ninjas = [
-    {name: 'Yoshi', belt: 'black'},
-    {name: 'Rui', belt: 'red'},
-    {name: 'Crystal', belt: 'purple'}
-  ];
+  ninjas = [];
 
-  constructor() {}
+  term = '';
+
+  constructor(private logger: LoggingService) {}
+
+  logIt(){
+    this.logger.log();
+  }
 
   ngOnInit() {
   }

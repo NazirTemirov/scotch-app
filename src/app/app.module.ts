@@ -8,18 +8,21 @@ import { HomeComponent } from './home/home.component';
 import { ContactsComponent } from './contacts/contacts.component';
 
 import { Routes, RouterModule } from "@angular/router";
+import { FilterPipe } from './filter.pipe';
+import { LoggingService } from "app/logging.service";
 
 const appRoutes: Routes = [
     {path: 'contacts/:ninja', component: ContactsComponent},
     {path: 'contacts', component: ContactsComponent},
-    { path: '', component: HomeComponent}
+    {path: '', component: HomeComponent}
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ContactsComponent
+    ContactsComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,7 @@ const appRoutes: Routes = [
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [LoggingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

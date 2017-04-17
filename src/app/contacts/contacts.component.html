@@ -1,6 +1,11 @@
 <h2>Ninja Listitng</h2>
+<form id="filter">
+  <label for="termInput">Filter ninjas by name:</label>
+  <input type="text" [(ngModel)]="term" name="termInput"/>
+</form>
+
 <ul id="ninja-listing">
-  <li *ngFor="let ninja of ninjas">
+  <li *ngFor="let ninja of ninjas | filter:term">
     <div class="single-ninja">
       <!-- Belt Colour -->
       <span [ngStyle]="{background: ninja.belt}">{{ninja.belt}} belt</span>
@@ -10,3 +15,5 @@
     </div>
   </li>
 </ul>
+
+<button (click)="logIt()">Log me</button>
