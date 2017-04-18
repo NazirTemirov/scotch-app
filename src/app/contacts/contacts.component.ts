@@ -35,7 +35,7 @@ export class ContactsComponent implements OnInit {
         this.ninjas.push(snapshot.val());
     });
     ref.on('child_removed', (snapshot) => {
-        this.ninjas[snapshot.val().key];
+        delete this.ninjas[0];
     });
   }
 
