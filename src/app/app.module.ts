@@ -10,6 +10,7 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { Routes, RouterModule } from "@angular/router";
 import { FilterPipe } from './filter.pipe';
 import { LoggingService } from "app/logging.service";
+import { DataService } from "app/data.service";
 
 const appRoutes: Routes = [
     {path: 'contacts/:ninja', component: ContactsComponent},
@@ -30,7 +31,7 @@ const appRoutes: Routes = [
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [LoggingService],
+  providers: [LoggingService, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

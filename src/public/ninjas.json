@@ -1,12 +1,14 @@
-{
-    "name": "Yoshi", 
-    "belt": "black"
-},
-{
-    "name": "Rui", 
-    "belt": "red"
-},
-{
-    "name": "Crystal", 
-    "belt": "purple"
-}
+[
+    {
+        "name": "Yoshi", 
+        "belt": "black"
+    },
+    {
+        "name": "Rui", 
+        "belt": "red"
+    },
+    {
+        "name": "Crystal", 
+        "belt": "purple"
+    }
+]
