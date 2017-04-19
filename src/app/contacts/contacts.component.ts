@@ -34,9 +34,6 @@ export class ContactsComponent implements OnInit {
     ref.on('child_added', (snapshot) => {
         this.ninjas.push(snapshot.val());
     });
-    ref.on('child_removed', (snapshot) => {
-        delete this.ninjas[0];
-    });
   }
 
   setNinjas(ninjas) {
@@ -57,10 +54,11 @@ export class ContactsComponent implements OnInit {
     firebase.database().ref().update(updates);
   }
 
-  fbRemoveData(key){
-    var ref = firebase.database().ref('/ninjas/' + key);
-
+  fbRemoveData(ninja){
+    var ref = firebase.database().ref('/ninjas/' + ninja.key);
     ref.remove();
+    
+    delete this.ninjas[this.ninjas.indexOf(ninja)];
+    
   }
-
 }
