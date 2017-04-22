@@ -5,16 +5,24 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome",
+            "url": "http://localhost:4200",
+            "webRoot": "${workspaceRoot}",
+            "sourceMaps": true
+        },
+        {
             "type": "node",
             "request": "launch",
-            "name": "Запустить программу",
+            "name": "Node launch",
             "program": "${workspaceRoot}\\serve",
             "outFiles": []
         },
         {
             "type": "node",
             "request": "attach",
-            "name": "Подключить к порту",
+            "name": "Node attach",
             "address": "localhost",
             "port": 5858,
             "outFiles": []

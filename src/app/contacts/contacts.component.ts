@@ -32,12 +32,17 @@ export class ContactsComponent implements OnInit {
     var ref = firebase.database().ref('/ninjas/');
 
     ref.on('child_added', (snapshot) => {
-        this.ninjas.push(snapshot.val());
+      var ninjas = this.ninjas.filter(function(ninja){
+        return ninja; 
+      });
+
+      ninjas.push(snapshot.val());
+      this.setNinjas(ninjas);
     });
   }
 
   setNinjas(ninjas) {
-    this.ninjas = [ninjas];
+    this.ninjas = ninjas;
   }
 
   fbPostData(name, belt) {
@@ -59,6 +64,11 @@ export class ContactsComponent implements OnInit {
     ref.remove();
     
     delete this.ninjas[this.ninjas.indexOf(ninja)];
-    
+
+    var ninjas = this.ninjas.filter(function(n){
+      return n !== ninja; 
+    })
+
+    this.setNinjas(ninjas);
   }
 }
