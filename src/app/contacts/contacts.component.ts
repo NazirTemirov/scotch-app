@@ -11,6 +11,9 @@ declare var firebase: any;
 })
 export class ContactsComponent implements OnInit {
   ninjas = [];
+  
+  name = '';
+  belt = '';
 
   term = '';
 
