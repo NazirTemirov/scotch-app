@@ -17,7 +17,7 @@
 </ul>
 
 <form id="add-ninja">
-  <input type="text" placeholder="Ninja name" [(ngModel)]="name" name="nameInput" />
-  <input  type="text" placeholder="Ninja belt" [(ngModel)]="belt" name="beltInput" />
+  <input type="text" placeholder="Ninja name" [(ngModel)]="name" name="nameInput" required/>
+  <input type="text" placeholder="Ninja belt" [(ngModel)]="belt" name="beltInput" required/>
   <button (click)="fbPostData(name, belt)">Add Ninja</button>
 </form>

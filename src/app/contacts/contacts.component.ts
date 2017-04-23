@@ -11,7 +11,7 @@ declare var firebase: any;
 })
 export class ContactsComponent implements OnInit {
   ninjas = [];
-  
+
   name = '';
   belt = '';
 
@@ -49,6 +49,10 @@ export class ContactsComponent implements OnInit {
   }
 
   fbPostData(name, belt) {
+    if(!name || name == '' || !belt || belt == '') {
+      return;
+    }
+
     var key = firebase.database().ref().child('ninjas').push().key;
 
     var ninja = {
@@ -60,6 +64,9 @@ export class ContactsComponent implements OnInit {
     var updates = {};
     updates['/ninjas/' + key] = ninja;
     firebase.database().ref().update(updates);
+
+    this.name = '';
+    this.belt = '';
   }
 
   fbRemoveData(ninja){
