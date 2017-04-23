@@ -15,6 +15,7 @@ import { DataService } from "app/data.service";
 const appRoutes: Routes = [
     {path: 'contacts/:ninja', component: ContactsComponent},
     {path: 'contacts', component: ContactsComponent},
+    {path: 'home', component: HomeComponent},
     {path: '', component: HomeComponent}
 ];
 

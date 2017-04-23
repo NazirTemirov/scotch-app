@@ -24,10 +24,6 @@ export class ContactsComponent implements OnInit {
   }
 
   ngOnInit() {
-    /*this.dataService.fetchData().subscribe(
-      (data) => this.ninjas = data
-    );*/
-
     this.bindEventsFromFirebase();
   }
 
